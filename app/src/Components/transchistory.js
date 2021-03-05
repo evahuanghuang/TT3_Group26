@@ -20,11 +20,12 @@ class TranscHistory extends React.Component {
     render() {
         return (
             <div className="TranscHistory">
+                
                 <h1>Transaction History</h1>
                 <h3></h3>
-                <Button variant="outline-primary"></Button>{'Lastest Month'}
-                <Button variant="outline-primary">Secondary</Button>{'Last 3 Months'}
-                <Button variant="outline-primary">Success</Button>{'Last 6 Months'}
+                <Button variant="outline-primary">{'Lastest Month'}</Button>
+                <Button variant="outline-primary">{'Last 3 Months'}</Button>
+                <Button variant="outline-primary">{'Last 6 Months'}</Button>
 
                 <Table striped bordered hover>
                     <thead>

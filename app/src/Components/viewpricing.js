@@ -49,7 +49,7 @@ class ViewPricing extends React.Component {
         </div>
       );
     }
-  }
+}
 
 export default ViewPricing;
 

@@ -15,7 +15,8 @@ class login extends Component {
             username: "",
             password: "",
             open: false,
-            loading: false
+            loading: false,
+            accountInfo: {}
         };
     }
 
@@ -51,29 +52,29 @@ class login extends Component {
             .then((response) => response.text())
             .then((responseText) => {
                 try {
-                    console.log(responseText);
                     var responseJson = JSON.parse(responseText);
                     console.log(responseJson);
-                    localStorage.setItem('accountKey', responseJson["accountKey"]);
+                    localStorage.setItem('accountInfo', JSON.stringify(responseJson));
+                    this.setState({ accountInfo: responseJson });
                     this.props.history.push('/Mainpage');
                 } catch (e) {
                     console.log(e);
-                    this.setState({ open: true });
-                    return (<Snackbar
-                        open={this.state.open}
-                        autoHideDuration={6000}
-                        onClose={this.handleClose}
-                        message="Invalid username or password"
-                        action={
-                            <React.Fragment>
-                                <Button color="secondary" size="small" onClick={this.handleClose}>
-                                    UNDO
-                  </Button>
-                                <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleClose}>
+                    //     this.setState({ open: true });
+                    //     return (<Snackbar
+                    //         open={this.state.open}
+                    //         autoHideDuration={6000}
+                    //         onClose={this.handleClose}
+                    //         message="Invalid username or password"
+                    //         action={
+                    //             <React.Fragment>
+                    //                 <Button color="secondary" size="small" onClick={this.handleClose}>
+                    //                     UNDO
+                    //   </Button>
+                    //                 <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleClose}>
 
-                                </IconButton>
-                            </React.Fragment>
-                        } />);
+                    //                 </IconButton>
+                    //             </React.Fragment>
+                    //         } />);
                 }
             })
             .catch((error) => {
