@@ -20,7 +20,7 @@ class ViewPricing extends React.Component {
       return (
         <div className="ViewPricing">
           <h1>
-            <Badge variant="warning">$$</Badge> Asset Pricing 
+            <Badge variant="primary">$$</Badge> Asset Pricing 
           </h1>  
       
           <Button variant="success" size="lg" active>
@@ -32,19 +32,19 @@ class ViewPricing extends React.Component {
           <p>    <br/>   </p>
           <Table striped bordered hover>
           <thead>
-          <tr>
-          <th>Asset Name</th>
-          <th>Current Price($)</th>
-          <th>Time of Last Price Update </th>
-          </tr>
+            <tr>
+              <th>Asset Name</th>
+              <th>Current Price($)</th>
+              <th>Time of Last Price Update </th>
+            </tr>
           </thead>
-          <tbody>
-          <tr>
-          <td>TechTrek(TTK)</td>
-          <td>1000</td>
-          <td>05/03/2021 19:20:30</td>
-          </tr>
-          </tbody>
+            <tbody>
+              <tr>
+                <td>TechTrek(TTK)</td>
+                <td>1000</td>
+                <td>05/03/2021 19:20:30</td>
+              </tr>
+            </tbody>
           </Table>
         </div>
       );

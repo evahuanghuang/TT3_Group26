@@ -21,42 +21,42 @@ class TranscHistory extends React.Component {
         return (
             <div className="TranscHistory">
                 <h1>Transaction History</h1>
-                <h3>View History in</h3>
+                <h3></h3>
                 <Button variant="outline-primary"></Button>{'Lastest Month'}
                 <Button variant="outline-primary">Secondary</Button>{'Last 3 Months'}
                 <Button variant="outline-primary">Success</Button>{'Last 6 Months'}
 
                 <Table striped bordered hover>
                     <thead>
-                    <tr>
-                    <th>Transaction ID</th>
-                    <th>Order Type</th>
-                    <th>Date and Time</th>
-                    <th>Asset Name</th>
-                    <th>Asset Amount</th>
-                    <th>Asset Price</th>
-                    <th>Cash Amount</th>
-                    </tr>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Order Type</th>
+                            <th>Date and Time</th>
+                            <th>Asset Name</th>
+                            <th>Asset Amount</th>
+                            <th>Asset Price</th>
+                            <th>Cash Amount</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                    <td>12345</td>
-                    <td>"BUY"</td>
-                    <td>05/03/2021 18:00:00</td>
-                    <td>GLD</td>
-                    <td>2000</td>
-                    <td>500</td>
-                    <td>100000</td>
-                    </tr>
-                    <td>12328</td>
-                    <td>"BUY"</td>
-                    <td>05/03/2021 20:00:00</td>
-                    <td>TTK</td>
-                    <td>100</td>
-                    <td>1000</td>
-                    <td>100000</td>
+                        <tr>
+                            <td>12345</td>
+                            <td>"BUY"</td>
+                            <td>05/03/2021 18:00:00</td>
+                            <td>GLD</td>
+                            <td>2000</td>
+                            <td>500</td>
+                            <td>100000</td>
+                        </tr>
+                            <td>12328</td>
+                            <td>"BUY"</td>
+                            <td>05/03/2021 20:00:00</td>
+                            <td>TTK</td>
+                            <td>100</td>
+                            <td>1000</td>
+                            <td>100000</td>
                     </tbody>
-                    </Table>
+                </Table>
             </div>
         );
     }
