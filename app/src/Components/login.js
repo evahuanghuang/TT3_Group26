@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import React, { Component, Route } from 'react';
 import { Redirect, withRouter } from 'react-router-dom'
 import { Snackbar, IconButton, Button } from '@material-ui/core';
+import { Form, Col, Row, Container } from 'react-bootstrap';
+
 
 class login extends Component {
     constructor(props) {
@@ -100,33 +102,39 @@ class login extends Component {
     render() {
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="input-group">
-                        <label htmlFor="text">Username</label>
-                        <input
-                            type="text"
-                            name="username"
-                            id="username"
-                            onChange={this.handleChange("username")}
-                            title="username"
-                            required
-                        />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            onChange={this.handleChange("password")}
-                            title="password"
-                            required
-                        />
-                    </div>
-                    <button type="submit">Sign In</button>
-                </form>
-            </div>
+            
+            <Container>
+                <Form onSubmit={this.handleSubmit}>
+ <Form.Group as={Row} controlId="formHorizontalEmail">
+   <Form.Label column sm={2}>
+     Username
+   </Form.Label>
+   <Col sm={10}>
+     <Form.Control type="text" placeholder="Enter Username Here" onChange={this.handleChange("username")} />
+   </Col>
+ </Form.Group>
+ 
+ <Form.Group as={Row} controlId="formHorizontalPassword">
+   <Form.Label column sm={2}>
+     Password
+   </Form.Label>
+   <Col sm={10}>
+     <Form.Control type="password" placeholder="Enter Password Here" onChange={this.handleChange("password")} />
+   </Col>
+ </Form.Group>
+ <Form.Group as={Row} controlId="formHorizontalCheck">
+   <Col sm={{ span: 10, offset: 2 }}>
+     <Form.Check label="Remember me" />
+   </Col>
+ </Form.Group>
+ 
+ <Form.Group as={Row}>
+   <Col sm={{ span: 10, offset: 2 }}>
+     <Button type="submit">Sign in</Button>
+   </Col>
+ </Form.Group>
+</Form>
+            </Container>
         );
     }
 }
