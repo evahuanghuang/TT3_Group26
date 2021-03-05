@@ -77,24 +77,8 @@ class login extends Component {
                 }
             })
             .catch((error) => {
-                //console.error(error);
+                console.error(error);
 
-                console.log("ERROR");
-                // return (<Snackbar
-                //     open={this.state.open}
-                //     autoHideDuration={6000}
-                //     onClose={this.handleClose}
-                //     message="Invalid username or password"
-                //     action={
-                //         <React.Fragment>
-                //             <Button color="secondary" size="small" onClick={this.handleClose}>
-                //                 UNDO
-                // </Button>
-                //             <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleClose}>
-
-                //             </IconButton>
-                //         </React.Fragment>
-                //     } />);
             });
     };
 
