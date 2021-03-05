@@ -61,3 +61,5 @@ class TranscHistory extends React.Component {
         );
     }
 } 
+
+export default TranscHistory;
