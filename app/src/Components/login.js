@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 // import Routes from "App";
 import React, { Component, Route } from 'react';
 import { Redirect, withRouter } from 'react-router-dom'
